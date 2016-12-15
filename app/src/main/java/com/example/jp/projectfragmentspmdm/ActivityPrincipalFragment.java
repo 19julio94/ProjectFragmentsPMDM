@@ -28,12 +28,23 @@ public class ActivityPrincipalFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(getActivity(),ActivitySecond.class);
+                if(getResources().getBoolean(R.bool.modoDosPantallas)){
+                    Toast toast = Toast.makeText(getActivity(),"Estoy en Landscape", Toast.LENGTH_SHORT);
+                    toast.show();
 
-                startActivity(intent);
 
-                Toast.makeText(getActivity(), "Esto es la segunda Activity", Toast.LENGTH_SHORT).show();
+                }else {
 
+                    Toast toast = Toast.makeText(getActivity(), "Estoy en Portrait", Toast.LENGTH_SHORT);
+                    toast.show();
+
+
+                    //Intent intent = new Intent(getActivity(), ActivitySecond.class);
+
+                    //startActivity(intent);
+
+
+                }
             }
         });
 
