@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -13,10 +14,17 @@ public class ActivitySecondFragment extends Fragment {
 
     public ActivitySecondFragment() {
     }
-
+    TextView txt;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_activity_second, container, false);
+        View f2 = inflater.inflate(R.layout.fragment_activity_second, container,false);
+        txt = (TextView) f2.findViewById(R.id.text);
+        return f2;
     }
+
+    public void cambiarTexto(String text){
+        txt.setText(text);
+    }
+
 }

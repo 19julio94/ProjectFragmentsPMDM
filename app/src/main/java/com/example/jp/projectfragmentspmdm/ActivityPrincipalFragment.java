@@ -54,7 +54,7 @@ public class ActivityPrincipalFragment extends Fragment {
                      //Intent intent = new Intent(getActivity(), ActivitySecond.class);
                     //startActivity(intent);
 
-                    Intent i= new Intent(getActivity(),ActivitySecond);
+                    Intent i= new Intent(getActivity(),ActivitySecond.class);
                     i.putExtra(ActivityPrincipalFragment.txt,"Ah no,Me he ido jajajaja");
                     startActivity(i);
 
