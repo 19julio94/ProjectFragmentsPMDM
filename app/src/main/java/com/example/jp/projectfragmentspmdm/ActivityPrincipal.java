@@ -23,6 +23,8 @@ public class ActivityPrincipal extends AppCompatActivity implements ActivityPrin
         if (fr2 != null) {
             fr2.cambiarTexto(texto);
         }
+
+
     }
 
 }
