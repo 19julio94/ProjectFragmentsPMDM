@@ -2,7 +2,6 @@
     <string name="app_name">ProjectFragmentsPMDM</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_second">ActivitySecond</string>
-    <string name="button">Dime que funciona</string>
     <string name="texto">¿De verdad esta funcionando?</string>
 
 </resources>

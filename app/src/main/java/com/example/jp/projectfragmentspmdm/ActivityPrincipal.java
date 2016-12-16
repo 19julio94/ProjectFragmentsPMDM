@@ -9,15 +9,20 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class ActivityPrincipal extends AppCompatActivity {
+public class ActivityPrincipal extends AppCompatActivity implements ActivityPrincipalFragment.Comunicador {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+    }
+    @Override
 
+    public void mensaje(String texto) {
+        ActivitySecondFragment fr2 = (ActivitySecondFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLand);
+        if (fr2 != null) {
+            fr2.cambiarTexto(texto);
+        }
     }
 
-
-        }
-
+}

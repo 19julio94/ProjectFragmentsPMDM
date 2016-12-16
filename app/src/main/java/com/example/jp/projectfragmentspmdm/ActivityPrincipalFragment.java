@@ -14,7 +14,10 @@ import android.widget.Toast;
  * A placeholder fragment containing a simple view.
  */
 public class ActivityPrincipalFragment extends Fragment {
+
+
     Comunicador cm;
+
     public interface Comunicador{
         public void mensaje(String texto);
     }
@@ -23,17 +26,19 @@ public class ActivityPrincipalFragment extends Fragment {
         super.onAttach(contexto);
         cm = (Comunicador)contexto;
     }
-    final static String txt = "He vuelto";
+    final static String TXT = "He vuelto";
+    private Button boton;
     public ActivityPrincipalFragment() {
 
 
     }
 
 
-    private Button boton;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         View view=inflater.inflate(R.layout.fragment_activity_principal, container, false);
         boton = (Button)view.findViewById(R.id.bplay);
@@ -51,11 +56,10 @@ public class ActivityPrincipalFragment extends Fragment {
 
                    // Toast toast = Toast.makeText(getActivity(), "Estoy en Portrait", Toast.LENGTH_SHORT);
                    // toast.show();
-                     //Intent intent = new Intent(getActivity(), ActivitySecond.class);
-                    //startActivity(intent);
+
 
                     Intent i= new Intent(getActivity(),ActivitySecond.class);
-                    i.putExtra(ActivityPrincipalFragment.txt,"Ah no,Me he ido jajajaja");
+                    i.putExtra(ActivityPrincipalFragment.TXT,"HOLIS HOLIS");
                     startActivity(i);
 
 
