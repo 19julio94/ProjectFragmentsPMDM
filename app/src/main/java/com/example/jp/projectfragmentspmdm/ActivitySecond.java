@@ -17,7 +17,7 @@ public class ActivitySecond extends AppCompatActivity {
 
 
 
-
+//En esta activity 2 se recoge el mensaje enviado desde la activity 1,este mensaje se encuentra en el fragment1
         protected void onCreate (Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_second);

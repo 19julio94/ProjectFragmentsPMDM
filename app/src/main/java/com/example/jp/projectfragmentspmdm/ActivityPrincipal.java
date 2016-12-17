@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
+//se impementa en la activity principal la clase PrincipalFragment
 public class ActivityPrincipal extends AppCompatActivity implements ActivityPrincipalFragment.Comunicador {
 
     @Override
@@ -17,7 +17,7 @@ public class ActivityPrincipal extends AppCompatActivity implements ActivityPrin
         setContentView(R.layout.activity_principal);
     }
     @Override
-
+//Este metodo hace que si la pantalla esta en Landcape se cambie el texto por un texto que nosotros hemos creado en el fragment 1
     public void mensaje(String texto) {
         ActivitySecondFragment fr2 = (ActivitySecondFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentLand);
         if (fr2 != null) {
